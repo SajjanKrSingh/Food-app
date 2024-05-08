@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="w-full h-[80vh] flex flex-col-reverse lg:flex-row justify-between items-center">
       <div className="left w-full lg:w-1/2 ">
-        <h1 className="lg:text-7xl  text-xl ml-[10vh] w-[400px] lg:ml-0 font-extrabold text-green-600  ">
+        <h1 className="lg:text-7xl  text-xl ml-[10vh] w-[400px] lg:ml-0 font-extrabold lg:font-[comforter] text-green-600  ">
           It Takes Three 
           To Taco
         </h1>
