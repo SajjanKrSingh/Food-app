@@ -1,5 +1,5 @@
 import React from "react";
-import image1 from "../assets/food.png";
+import image1 from "../assets/food1.png";
 import { Link } from "react-router-dom";
 import { MdRestaurantMenu } from "react-icons/md";
 
