@@ -6,3 +6,8 @@
     font-family: comforter;
     src: url(./assets/Comforter-Regular.ttf);
 }
+
+::selection{
+    background-color: green;
+    color: #fff;
+}
