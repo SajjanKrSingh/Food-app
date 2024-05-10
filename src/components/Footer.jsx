@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
        <footer className=" lg:grid lg:grid-cols-5">
-  <div className="relative block h-32 lg:col-span-2 lg:h-full mb-5">
+  <div className="relative block h-32 lg:col-span-2 lg:h-full mb-10">
     <img
       src="https://png.pngtree.com/png-clipart/20231011/original/pngtree-ratatouille-png-with-ai-generated-png-image_13294687.png"
       alt=""
