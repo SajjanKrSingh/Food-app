@@ -1,10 +1,11 @@
 import { useContext, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { recipecontext } from "../contexts/RecipeContext";
 
 const Details = () => {
   const [recipe, setrecipe] = useContext(recipecontext);
   const params = useParams();
+  const neviaget=useNavigate();
   const recipes = recipe.find((r) => r.id == params.id);
 
 const Deletehandler=()=>{
@@ -13,7 +14,7 @@ const Deletehandler=()=>{
     copyrecipe.splice(recipeindex,1);
     setrecipe(copyrecipe);
     localStorage.setItem("recipe", JSON.stringify(copyrecipe));
-    window.location.href="/recipes";
+    neviaget('/recipes');
 }
   //   useEffect(() => {
   //       setrecipe(JSON.parse(localStorage.getItem("recipe")));
