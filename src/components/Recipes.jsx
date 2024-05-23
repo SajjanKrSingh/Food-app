@@ -2,13 +2,15 @@ import React, { useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Card from "./Card";
 import { recipecontext } from "../contexts/RecipeContext";
+import { useSelector } from "react-redux";
 const Recipes = () => {
-  const [recipe, setrecipe] = useContext(recipecontext);
+  // const [recipe, setrecipe] = useContext(recipecontext);
+  const {recipe} =useSelector((state)=>state.RecipeReducer)
   const { pathname } = useLocation();
 
   useEffect(() => {
     console.log(recipe);
-    setrecipe(JSON.parse(localStorage.getItem("recipe")) || []);
+    // setrecipe(JSON.parse(localStorage.getItem("recipe")) || []);
   }, []);
   return recipe ? (
     <div className="mb-10">
