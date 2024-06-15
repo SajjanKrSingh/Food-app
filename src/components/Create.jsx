@@ -3,18 +3,15 @@ import { recipecontext } from "../contexts/RecipeContext";
 import { nanoid } from "nanoid";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addRecipe } from "../../store/Reducers/RecipeReducer";
 
 const Create = () => {
-  // const [recipe, setrecipe] = useContext(recipecontext);
+  const [recipe, setrecipe] = useContext(recipecontext);
   const [image, setimage] = useState("");
   const [title, settitle] = useState("");
   const [discription, setdiscription] = useState("");
   const [ingredient, setingredient] = useState("");
   const [instruction, setinstruction] = useState("");
   const nevigate=useNavigate();
-  const dispatch=useDispatch();
 
   const submithandler = (e) => {
     e.preventDefault();
@@ -26,10 +23,9 @@ const Create = () => {
       ingredient,
       instruction,
     };
-    dispatch(addRecipe(newRecipe));
-    // setrecipe([...recipe, newRecipe]);
+    setrecipe([...recipe, newRecipe]);
     // console.log(newRecipe);
-    // localStorage.setItem("recipe", JSON.stringify([...recipe, newRecipe]));
+    localStorage.setItem("recipe", JSON.stringify([...recipe, newRecipe]));
     toast.success("Recipe Created!");
     nevigate("/recipes");
   };
